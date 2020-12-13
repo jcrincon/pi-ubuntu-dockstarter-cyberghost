@@ -29,4 +29,32 @@ Home Media Server on Raspberry Pi, Raspbian Server, Dockstarter and Cyberghost V
 5. **Install DockSTARTer**
 `bash -c "$(curl -fsSL https://get.dockstarter.com)"`
 6. **Reboot**
-^sudo reboot`
+`sudo reboot`
+
+## INSTALL OPENVPN
+1. **Update & Upgrade**
+`sudo apt-get update && sudo apt-get upgrade`
+2. **Install Dependencies**
+`sudo apt-get install openvpn openssl openresolv`
+3. **Create a credentials file**
+`sudo nano user.txt`
+4. **Add credentials to user.txt**
+```
+USER
+PASSWORD
+```
+5. **Copy config files to /etc/openvpn**
+```
+sudo cp CG_XX.conf /etc/openvpn/
+sudo cp ca.crt /etc/openvpn/
+sudo cp client.crt /etc/openvpn/
+sudo cp client.key /etc/openvpn/
+sudo cp user.txt /etc/openvpn/
+```
+6. **Add VPN tun driver**
+```
+echo "iptable_mangle" | sudo tee /etc/modules-load.d/iptable_mangle.conf
+echo "tun" | sudo tee /etc/modules-load.d/tun.conf
+```
+7. **Reboot***
+`sudo reboot`
