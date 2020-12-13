@@ -1,8 +1,8 @@
 # PI-RASPBIAN-DOCKSTARTER-CYBERGHOST
 Home Media Server on Raspberry Pi, Raspbian Server, Dockstarter and Cyberghost VPN
 
-## AUTOMOUNT A DRIVE
-1. **Check Drive**
+## AUTOMOUNT AN EXTERNAL USB DRIVE
+1. **Locate Partition**
 `sudo fdisk -l`
 2. **Check UUID**
 `sudo blkid`
