@@ -1,9 +1,6 @@
 # PI-RASPBIAN-DOCKSTARTER-CYBERGHOST
 Home Media Server on Raspberry Pi, Raspbian Server, Dockstarter and Cyberghost VPN
 
-## CREATE RASPBIAN IMAGE ON SD CARD
-1. 
-
 ## AUTOMOUNT AN EXTERNAL USB DRIVE
 1. **Locate Partition**
 `sudo fdisk -l`
@@ -68,13 +65,14 @@ sudo cp user.txt /etc/openvpn/
 5. **Edit Configuration**
 `sudo nano CG_XX.conf`
 6. **Extend the line ‘auth-user-pass’**
+
 From:
 ```
 [...]
 auth-user-pass
 [...]
 ```
-To:
+  To:
 ```
 [...]
 auth-user-pass /etc/openvpn/user.txt
