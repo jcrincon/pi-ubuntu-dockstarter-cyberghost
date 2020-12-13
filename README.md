@@ -11,8 +11,8 @@ Home Media Server on Raspberry Pi, Ubuntu 18.04 Server, Cyberghost VPN
 4. Edit FSTAB
 `sudo nano /etc/fstab`
 5. Add line:
-UUID=XXXXXXXXXXX  /mnt/hdd    auto nosuid,nodev,nofail,x-gvfs-show 0 0
+`UUID=XXXXXXXXXXX  /mnt/hdd    auto nosuid,nodev,nofail,x-gvfs-show 0 0`
 6. Save
-Ctrl^O + Ctrl^X
+`Ctrl^O + Ctrl^X`
 7. Mount
 `sudo mount -a`
